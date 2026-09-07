@@ -8,7 +8,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-lg-6">
+  <div class="col-lg-12">
     <app-tabulator-grid [tableData]="filteredTableData" [columnConfig]="columnConfig" [height]="'200px'"
       [paginationSize]="paginationSize" [filterColumns]="filterColumns" [allowCSVExport]="allowCSVExport"
       [isLoading]="isGridLoading" [loadingText]="'Loading users...'" [allowPrint]="allowPrint"
@@ -16,7 +16,7 @@
     (refreshClicked)="refreshData()" [gridName]="'Active Users'">
     </app-tabulator-grid>
   </div>
-  <div class="col-lg-6">
+  <div class="col-lg-12">
     <app-user-registration-approval></app-user-registration-approval>
   </div>
   <app-toaster></app-toaster>
