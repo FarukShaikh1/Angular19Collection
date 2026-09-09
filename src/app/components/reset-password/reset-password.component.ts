@@ -66,7 +66,7 @@ export class ResetPasswordComponent implements OnInit, AfterViewInit {
     public globalService: GlobalService,
     private localStorageService: LocalStorageService,
     private titleService: Title
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.localStorageService.clear();
@@ -110,7 +110,7 @@ export class ResetPasswordComponent implements OnInit, AfterViewInit {
             Validators.pattern(
               ApplicationConstants.PATTERN_REQUIRED_CHARS_IN_PASSWORD
             ),
-            this.passwordNotContainingName(this.personName), 
+            this.passwordNotContainingName(this.personName),
           ],
         ],
         confirmPassword: ['', [Validators.required]],
@@ -119,16 +119,7 @@ export class ResetPasswordComponent implements OnInit, AfterViewInit {
     );
   }
 
-  ngAfterViewInit(): void {
-    
-    
-    
-    
-    
-    
-    
-    
-  }
+  ngAfterViewInit(): void { }
 
   getPasswordLengthMessage(): string {
     return Messages.PASSWORD_LENGTH_MSG.replace(
@@ -152,7 +143,7 @@ export class ResetPasswordComponent implements OnInit, AfterViewInit {
     ) {
       confirmPassword?.setErrors({ passwordMismatch: true });
     } else {
-      
+
       if (confirmPassword?.hasError('passwordMismatch')) {
         confirmPassword.setErrors(null);
       }
@@ -175,7 +166,7 @@ export class ResetPasswordComponent implements OnInit, AfterViewInit {
         return null;
       }
 
-      
+
       const containsNamePart = nameParts.some((part) =>
         password.toLowerCase().includes(part.toLowerCase())
       );
@@ -225,7 +216,7 @@ export class ResetPasswordComponent implements OnInit, AfterViewInit {
             this.loaderService.hideLoader();
           }
         },
-        error: (error : any) => {
+        error: (error: any) => {
           if (error?.error?.errors?.ConfirmPassword) {
             console.error(
               Messages.PASSWORD_RESET_FAILED,

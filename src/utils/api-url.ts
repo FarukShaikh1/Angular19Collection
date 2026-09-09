@@ -68,15 +68,16 @@ export const API_URL = {
 
 
   REGISTER_USER: `${serverUrl}${apiPrefix}/auth/register`,
-  UPDATE_USER: `${serverUrl}${apiPrefix}/user/updateUserDetails?userId=`,
-  RESET_PASSWORD: `${serverUrl}${apiPrefix}/auth/resetpassword`,
-  FORGOT_PASSWORD: `${serverUrl}${apiPrefix}/auth/forgotpassword`,
+  RESET_PASSWORD: `${serverUrl}${apiPrefix}/user/reset-password`,
+
   VERIFY_OTP: `${serverUrl}${apiPrefix}/otp/verify`,
   SEND_OTP: `${serverUrl}${apiPrefix}/otp/send`,
   LOGIN: `${serverUrl}${apiPrefix}/user/login`,
   REFRESH_TOKEN: `${serverUrl}${apiPrefix}/user/refresh-token`,
   LOGOUT: `${serverUrl}${apiPrefix}/user/logout`,
   CHANGE_PASSWORD: `${serverUrl}${apiPrefix}/user/change-password`,
+  FORGOT_PASSWORD: `${serverUrl}${apiPrefix}/user/forgotpassword`,
+  UPDATE_USER: `${serverUrl}${apiPrefix}/user/updateUserDetails?userId=`,
 
 
   GET_DOCUMENT_List: `${serverUrl}${apiPrefix}/document`,
